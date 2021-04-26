@@ -1,10 +1,10 @@
 {% set name = "et-xmlfile" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "614d9722d572f6246302c4491846d2c393c199cfa4edc9af593437691683335b" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "8eb9e2bc2f8c97e37a2dc85a09ecdcdec9d8a396530a6d5a33b30b9a92da0c5c" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name | replace("-", "_") }}/{{ name | replace("-", "_") }}-{{ version }}.tar.gz
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -31,8 +31,8 @@ about:
   home: https://bitbucket.org/openpyxl/et_xmlfile
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.rst' 
-  summary: "An implementation of lxml.xmlfile for the standard library."
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENCE.rst
+  summary: An implementation of lxml.xmlfile for the standard library.
 
 extra:
   recipe-maintainers:
