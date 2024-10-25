@@ -1,6 +1,6 @@
 {% set name = "et-xmlfile" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "614d9722d572f6246302c4491846d2c393c199cfa4edc9af593437691683335b" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54" %}
 
 package:
   name: "{{ name|lower }}"
@@ -31,7 +31,7 @@ about:
   home: https://bitbucket.org/openpyxl/et_xmlfile
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.rst' 
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.rst'
   summary: "An implementation of lxml.xmlfile for the standard library."
 
 extra:
